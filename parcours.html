@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parcours du musée — Les Abattoirs, Toulouse</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brique:  '#A1453D',
+          indigo:  '#3425C4',
+          casse:   '#E4DBD2',
+          encre:   '#0E0E0E',
+          beton:   '#7A3A34',
+        },
+        fontFamily: {
+          display: ['Oswald', 'sans-serif'],
+          sans:    ['Montserrat', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html, body { overflow-x: hidden; }
+  :focus-visible { outline: 3px solid #3425C4; outline-offset: 2px; }
+</style>
+</head>
+
+<body class="font-sans text-encre bg-casse antialiased">
+
+<a href="#contenu" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-encre focus:text-casse focus:px-4 focus:py-2">
+  Aller au contenu principal
+</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="sticky top-0 z-50 bg-casse border-b-4 border-encre">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 sm:h-20 gap-4">
+
+      <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="Les Abattoirs — Accueil">
+        <img src="assets/logo.jpg" alt="Logo Les Abattoirs" class="h-11 sm:h-14 w-auto">
+        <span class="font-display uppercase leading-none hidden sm:block">
+          <span class="block text-lg sm:text-2xl tracking-tight">les Abattoirs</span>
+          <span class="block text-[10px] sm:text-xs tracking-[0.18em] text-beton font-sans font-medium">Musée — Frac Occitanie Toulouse</span>
+        </span>
+      </a>
+
+      <nav aria-label="Navigation principale" class="hidden lg:flex items-center gap-7 font-medium text-sm uppercase tracking-wide">
+        <a href="preparer-ma-visite.html" class="text-brique transition-colors">Préparer ma visite</a>
+        <a href="agenda.html" class="hover:text-brique transition-colors">Agenda</a>
+        <a href="decouvrir.html" class="hover:text-brique transition-colors">Découvrir</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+
+        <!-- Recherche (sitemap : Recherche) -->
+        <button type="button" aria-label="Rechercher" class="hidden sm:inline-flex items-center justify-center w-11 h-11 text-encre hover:text-brique transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+
+        <!-- Choix de la langue (sitemap : FR / EN / ES) -->
+        <div class="hidden sm:block relative group">
+          <button type="button" aria-label="Choix de la langue" class="inline-flex items-center justify-center h-11 px-2 font-display uppercase text-sm tracking-wide hover:text-brique transition-colors">
+            FR
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ml-1"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="absolute right-0 top-full hidden group-hover:block bg-casse border-2 border-encre min-w-[120px] font-display uppercase text-sm">
+            <li><a href="#" class="block px-4 py-2 hover:bg-encre hover:text-casse">Français</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-encre hover:text-casse">Anglais</a></li>
+            <li><a href="#" class="block px-4 py-2 hover:bg-encre hover:text-casse">Espagnol</a></li>
+          </ul>
+        </div>
+
+        <a href="billetterie.html"
+           class="inline-flex items-center justify-center min-h-[44px] px-3 sm:px-5 bg-brique text-casse font-display uppercase text-xs sm:text-sm tracking-wide hover:bg-encre transition-colors">
+          <span class="hidden sm:inline">Billetterie</span>
+          <span class="sm:hidden" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z"/></svg>
+            <span class="sr-only">Billetterie</span>
+          </span>
+        </a>
+
+        <a href="espace-compte.html"
+           class="inline-flex items-center justify-center min-h-[44px] px-3 sm:px-5 border-2 border-indigo text-indigo font-display uppercase text-xs sm:text-sm tracking-wide hover:bg-indigo hover:text-casse transition-colors">
+          <span class="hidden sm:inline">Espace Compte</span>
+          <span class="sm:hidden" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="sr-only">Espace Compte</span>
+          </span>
+        </a>
+
+        <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                class="lg:hidden inline-flex items-center justify-center w-11 h-11 -mr-1 text-encre">
+          <span class="sr-only">Ouvrir le menu</span>
+          <svg id="icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" aria-label="Navigation mobile" class="hidden lg:hidden border-t-2 border-encre bg-casse max-h-[80vh] overflow-y-auto">
+    <ul class="flex flex-col divide-y divide-beton/30 font-display uppercase tracking-wide">
+      <li><a href="preparer-ma-visite.html" class="block px-5 py-4 min-h-[44px] hover:bg-encre hover:text-casse transition-colors">Préparer ma visite</a><ul class="bg-casse/60"><li><a href="horaires-tarifs.html" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Horaires & Tarifs</a></li><li><a href="vous-etes.html" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Vous êtes ?</a></li><li><a href="parcours.html" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Parcours du musée</a></li><li><a href="accessibilite.html" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Accessibilité</a></li></ul></li>
+      <li><a href="agenda.html" class="block px-5 py-4 min-h-[44px] hover:bg-encre hover:text-casse transition-colors">Agenda</a><ul class="bg-casse/60"><li><a href="expositions.html" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Exposition</a></li><li><a href="activites.html" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Activités</a></li><li><a href="evenements.html" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Événement</a></li></ul></li>
+      <li><a href="decouvrir.html" class="block px-5 py-4 min-h-[44px] hover:bg-encre hover:text-casse transition-colors">Découvrir</a><ul class="bg-casse/60"><li><a href="decouvrir.html#histoires" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Histoires</a></li><li><a href="collections.html" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Collections</a></li><li><a href="decouvrir.html#bibliotheque" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Bibliothèque</a></li><li><a href="decouvrir.html#librairie" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Librairie</a></li><li><a href="decouvrir.html#restaurant" class="block px-8 py-3 text-sm normal-case font-sans text-encre/80 hover:bg-encre hover:text-casse transition-colors">Restaurant</a></li></ul></li>
+      <li><a href="billetterie.html" class="block px-5 py-4 min-h-[44px] bg-brique text-casse hover:bg-encre transition-colors">Billetterie</a></li>
+      <li><a href="espace-compte.html" class="block px-5 py-4 min-h-[44px] text-indigo hover:bg-indigo hover:text-casse transition-colors">Espace Compte</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="contenu">
+  <nav aria-label="Fil d'Ariane" class="bg-casse border-b border-beton/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs uppercase tracking-wide font-medium">
+      <a href="index.html" class="hover:text-brique transition-colors">Accueil</a> <span class="text-beton/50">/</span> <a href="preparer-ma-visite.html" class="hover:text-brique transition-colors">Préparer ma visite</a> <span class="text-beton/50">/</span> <span class="text-beton">Parcours du musée</span>
+    </div>
+  </nav>
+
+  <section class="relative bg-encre text-casse">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div class="lg:col-span-7 order-2 lg:order-none">
+        <p class="font-medium uppercase tracking-[0.25em] text-brique text-xs sm:text-sm mb-4">Préparer ma visite</p>
+        <h1 class="font-display uppercase font-semibold text-4xl sm:text-5xl leading-[1.05] mb-6">Parcours du musée</h1>
+        <p class="text-base sm:text-lg text-casse/80 max-w-2xl">Trois halles, mille façons de circuler. Suivez le fil ou laissez-vous porter.</p>
+      </div>
+      <div class="lg:col-span-5 order-1 lg:order-none">
+        <img src="assets/mediation.jpg" alt="" class="w-full h-56 sm:h-80 lg:h-[26rem] object-cover border-4 border-brique">
+      </div>
+    </div>
+  </section>
+<section class="bg-casse"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20"><h2 class="font-display uppercase font-semibold text-3xl sm:text-4xl mb-4">Nos itinéraires suggérés</h2><div class="mb-10"></div><div class="grid grid-cols-1 lg:grid-cols-3 gap-6"><article class="border-t-4 border-brique bg-casse p-6"><p class="text-xs font-medium uppercase tracking-[0.2em] text-brique mb-2">Halle 01</p><h3 class="font-display uppercase text-xl mb-2">L'essentiel en 1h</h3><p class="text-sm text-beton">Les œuvres phares de la collection et l'exposition du moment.</p></article><article class="border-t-4 border-indigo bg-casse p-6"><p class="text-xs font-medium uppercase tracking-[0.2em] text-indigo mb-2">Halle 02</p><h3 class="font-display uppercase text-xl mb-2">La scène émergente</h3><p class="text-sm text-beton">Cap sur les artistes contemporains et la création régionale.</p></article><article class="border-t-4 border-brique bg-casse p-6"><p class="text-xs font-medium uppercase tracking-[0.2em] text-brique mb-2">Halle 03</p><h3 class="font-display uppercase text-xl mb-2">Le grand format</h3><p class="text-sm text-beton">Sculptures monumentales et installations immersives.</p></article></div></div></section></main>
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-encre text-casse border-t-4 border-brique">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="assets/logo.jpg" alt="Logo Les Abattoirs" class="h-12 w-auto">
+          <span class="font-display uppercase text-xl">les Abattoirs</span>
+        </div>
+        <p class="text-sm text-casse/70 max-w-xs">
+          76 Allées Charles de Fitte<br>31300 Toulouse, France
+        </p>
+      </div>
+
+      <nav aria-label="Préparer ma visite">
+        <h3 class="font-display uppercase text-sm tracking-wide mb-4">Préparer ma visite</h3>
+        <ul class="space-y-3 text-sm text-casse/70">
+          <li><a href="horaires-tarifs.html" class="hover:text-casse transition-colors">Horaires &amp; tarifs</a></li>
+          <li><a href="vous-etes.html" class="hover:text-casse transition-colors">Vous êtes ?</a></li>
+          <li><a href="parcours.html" class="hover:text-casse transition-colors">Parcours du musée</a></li>
+          <li><a href="accessibilite.html" class="hover:text-casse transition-colors">Accessibilité</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Agenda">
+        <h3 class="font-display uppercase text-sm tracking-wide mb-4">Agenda</h3>
+        <ul class="space-y-3 text-sm text-casse/70">
+          <li><a href="expositions.html" class="hover:text-casse transition-colors">Expositions</a></li>
+          <li><a href="activites.html" class="hover:text-casse transition-colors">Activités</a></li>
+          <li><a href="evenements.html" class="hover:text-casse transition-colors">Événements</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Découvrir">
+        <h3 class="font-display uppercase text-sm tracking-wide mb-4">Découvrir</h3>
+        <ul class="space-y-3 text-sm text-casse/70">
+          <li><a href="collections.html" class="hover:text-casse transition-colors">Collections</a></li>
+          <li><a href="decouvrir.html#bibliotheque" class="hover:text-casse transition-colors">Bibliothèque</a></li>
+          <li><a href="decouvrir.html#librairie" class="hover:text-casse transition-colors">Librairie</a></li>
+          <li><a href="decouvrir.html#restaurant" class="hover:text-casse transition-colors">Restaurant</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-casse/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-casse/60">
+      <p>© 2026 Les Abattoirs — Musée d'art moderne et contemporain, Toulouse.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-casse transition-colors">Mentions légales</a>
+        <a href="#" class="hover:text-casse transition-colors">Confidentialité</a>
+        <a href="#" class="hover:text-casse transition-colors">Plan du site</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  menuToggle.addEventListener('click', () => {
+    const exp = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!exp));
+    mobileMenu.classList.toggle('hidden');
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
